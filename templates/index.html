@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text2Speech</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 600px; margin: auto; }
+    textarea { width: 100%; height: 100px; margin-bottom: 1rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; }
+    audio { margin-top: 1rem; width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>Text-to-Speech App</h1>
+  <form id="tts-form" action="/speak-form" method="post">
+    <textarea id="text" name="text" placeholder="Enter text (Hindi/English)..." required></textarea><br/>
+    <button type="submit">Speak</button>
+  </form>
+  <audio id="audio" controls></audio>
+
+  <script>
+    const form = document.getElementById("tts-form");
+    const audio = document.getElementById("audio");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      const response = await fetch("/speak-form", {
+        method: "POST",
+        body: formData
+      });
+
+      if (response.ok) {
+        const blob = await response.blob();
+        audio.src = URL.createObjectURL(blob);
+        audio.play();
+      } else {
+        alert("Failed to generate speech.");
+      }
+    });
+  </script>
+</body>
+</html>

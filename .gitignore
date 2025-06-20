@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+
+venv/
+venv310/
+
+*.mp3
+*.wav
+
+*.pth
+*.bin
+TTS/.models/
+
+.vscode/
+
+.DS_Store
+Thumbs.db
