@@ -31,14 +31,15 @@ http://127.0.0.1:8000
 
 ## 🎤 API Usage
 ✅ POST /speak
-Request: multipart/form-data
+
+- Request: multipart/form-data
 
 ```bash
 {
   "text": "Namaste, how are you?"
 }
   ```
-Response:
+- Response:
 audio/mpeg streaming audio
 
 ---
