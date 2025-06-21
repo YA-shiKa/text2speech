@@ -11,8 +11,8 @@ Supports **Hindi** and **Indian-accented English**, with audio served as a strea
 ### 🔧 Clone & Install
 
 ```bash
-git clone https://github.com/yourusername/text2speech-app.git
-cd text2speech-app
+git clone https://github.com/YA-shiKa/text2speech
+cd text2speech
 python -m venv venv
 venv\Scripts\activate  # On Windows
 pip install -r requirements.txt
@@ -77,5 +77,6 @@ openai.tts_to_file(
 - Coqui TTS
 - Pydub
 - FFmpeg (must be installed & added to PATH)
-
+- SoundFile
+- Langdetect
 
