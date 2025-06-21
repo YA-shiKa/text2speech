@@ -2,7 +2,7 @@
 
 ## 🌐 Overview
 A full-stack responsive Text-to-Speech (TTS) web app that converts user input into natural-sounding speech using an open-source model.  
-Supports **Hindi** and **Indian-accented English**, with audio served as a streaming response via a Python FastAPI backend.
+Supports **Hindi** and **English**, with audio served as a streaming response via a Python FastAPI backend.
 
 ---
 
@@ -69,7 +69,7 @@ openai.tts_to_file(
 ## 🌟 Features
 
 - ✅ Open-source TTS model (`vits` via Coqui TTS)  
-- 🗣️ Hindi + Indian-accented English support  
+- 🗣️ Hindi + English support  
 - 📡 Real-time audio streaming (FastAPI)  
 - 💻 Responsive Web UI (HTML + JavaScript)  
 - 🧪 Compatible with OpenAI’s `tts_to_file()` API
