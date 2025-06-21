@@ -2,7 +2,7 @@ fastapi==0.115.1
 uvicorn==0.27.1
 jinja2==3.1.2
 pydub==0.25.1
-git+https://github.com/coqui-ai/TTS.git@v0.22.0#egg=TTS
+TTS==0.22.0
 numpy==1.22.0
 langdetect
 soundfile
