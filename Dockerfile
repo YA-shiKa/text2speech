@@ -4,14 +4,19 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
     git \
-    espeak \
     ffmpeg \
+    espeak \
     libsndfile1 \
+    build-essential \
+    cmake \
+    g++ \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip setuptools wheel
 
 COPY requirements.txt .
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir --use-pep517 -r requirements.txt
 
 COPY . .
 
