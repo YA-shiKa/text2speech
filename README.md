@@ -6,6 +6,13 @@ Supports **Hindi** and **Indian-accented English**, with audio served as a strea
 
 ---
 
+## ▶️ Preview
+
+
+https://github.com/user-attachments/assets/a63b314d-14a2-4a41-ba27-095e44634a26
+
+---
+
 ## ⚙️ Setup Instructions
 
 ### 🔧 Clone & Install
@@ -13,8 +20,8 @@ Supports **Hindi** and **Indian-accented English**, with audio served as a strea
 ```bash
 git clone https://github.com/YA-shiKa/text2speech
 cd text2speech
-python -m venv venv
-venv\Scripts\activate  # On Windows
+python3.10 -m venv venv310  # Ensure Python 3.10.13 is installed
+venv310\Scripts\activate     # On Windows
 pip install -r requirements.txt
 ```
 
@@ -79,4 +86,6 @@ openai.tts_to_file(
 - FFmpeg (must be installed & added to PATH)
 - SoundFile
 - Langdetect
+
+---
 
