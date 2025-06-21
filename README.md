@@ -67,3 +67,15 @@ openai.tts_to_file(
 - 💻 Responsive Web UI (HTML + JavaScript)  
 - 🧪 Compatible with OpenAI’s `tts_to_file()` API
 
+---
+
+## 📦 Requirements
+
+- Python 3.10+
+- FastAPI
+- Uvicorn
+- Coqui TTS
+- Pydub
+- FFmpeg (must be installed & added to PATH)
+
+
