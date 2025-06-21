@@ -11,12 +11,10 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-# For frontend form
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-# For frontend form POST
 @app.post("/speak-form")
 async def speak_form(text: str = Form(...)):
     if not text.strip():
@@ -24,7 +22,6 @@ async def speak_form(text: str = Form(...)):
     audio_stream = generate_audio_stream(text)
     return StreamingResponse(audio_stream, media_type="audio/mpeg")
 
-# ✅ For OpenAI SDK JSON POST
 class TTSRequest(BaseModel):
     text: str
 
