@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.10  # ← full image, not slim
 
 WORKDIR /app
 
@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip setuptools wheel
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir --use-pep517 -r requirements.txt
+
+RUN pip install --use-pep517 --no-cache-dir -r requirements.txt
 
 COPY . .
 
